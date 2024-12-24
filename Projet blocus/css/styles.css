@@ -2,11 +2,11 @@ body {
     font-family: 'Arial', sans-serif; /* Changez pour la police du logo si nécessaire */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Changez si nécessaire */
+    background-color: #001f3f; /* Bleu marine */
 }
 
 header {
-    background-color: #333; /* Couleur principale du logo */
+    background-color: #4B0082; /* Mauve du logo */
     color: #fff;
     width: 100%;
     text-align: center;
@@ -14,7 +14,7 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
-    height: 60px; /* Hauteur réduite du logo */
+    height: 60px; /* Hauteur ajustée pour le logo */
 }
 
 .header-content {
@@ -25,13 +25,16 @@ header {
 }
 
 .logo {
-    height: 50px; /* Hauteur réduite du logo */
-    max-width: 100%;
+    max-height: 50px; /* Hauteur réduite du logo */
+    margin: auto; /* Centrer le logo */
 }
 
 .menu-icon {
     font-size: 30px;
     cursor: pointer;
+    position: absolute; /* Superposer les 3 lignes sur le logo */
+    top: 15px;
+    right: 20px; /* Aligné à droite pour ne pas chevaucher le logo */
 }
 
 .side-menu {
@@ -39,9 +42,9 @@ header {
     position: fixed;
     z-index: 1;
     top: 0;
-    left: 0;
+    right: 0; /* Positionné à droite */
     height: 100%;
-    background-color: #333; /* Fond cohérent avec le logo */
+    background-color: #4B0082; /* Fond cohérent avec le logo */
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px; /* Espace pour ne pas chevaucher le logo */
@@ -63,15 +66,22 @@ header {
 .side-menu ul li a {
     color: #fff;
     text-decoration: none;
-    display: block;
+    display: flex; /* Utilisation de flex pour les images */
+    align-items: center;
     font-size: 25px;
+}
+
+.side-menu ul li a img {
+    margin-right: 10px; /* Espacement entre l'image et le texte */
+    width: 25px;
+    height: 25px;
 }
 
 .side-menu ul li a:hover {
     color: #FFD700; /* Couleur dorée au survol */
 }
 
-main {
+.main-content {
     padding: 1rem;
     margin-top: 70px; /* Espace pour l'en-tête fixe */
     transition: margin-left 0.5s;
@@ -86,7 +96,7 @@ main section {
 }
 
 footer {
-    background-color: #333; /* Couleur du logo */
+    background-color: #4B0082; /* Couleur du logo */
     color: #fff;
     text-align: center;
     padding: 1rem;
@@ -97,17 +107,18 @@ footer {
 
 .cours {
     display: flex;
+    flex-direction: column; /* Organiser en colonne pour meilleure lisibilité */
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .cours a {
-    display: block;
+    display: flex;
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
-    margin: 10px;
-    text-align: center;
+    margin: 5px;
+    text-align: left; /* Alignement à gauche pour une lecture plus naturelle */
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
@@ -123,21 +134,4 @@ footer {
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
-}
-
-.menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    position: absolute; /* Superpose les 3 lignes sur le logo */
-    top: 15px;
-    left: 20px;
-}
-
-.side-menu ul li a {
-    font-family: 'Arial', sans-serif; /* Remplacez par la police du logo */
-}
-
-header img {
-    width: auto;
-    height: 50px; /* Hauteur réduite du logo */
 }

@@ -1,0 +1,22 @@
+{
+    "relation_publique": [
+        {
+            "question": "Quelle est la définition des relations publiques?",
+            "options": ["Option A", "Option B", "Option C", "Option D"]
+        },
+        {
+            "question": "Quel est le rôle principal d'un chargé de relations publiques?",
+            "options": ["Option A", "Option B", "Option C", "Option D"]
+        }
+    ],
+    "evenementiel": [
+        {
+            "question": "Qu'est-ce qu'un événementiel?",
+            "options": ["Option A", "Option B", "Option C", "Option D"]
+        },
+        {
+            "question": "Quel est l'objectif principal d'un événementiel?",
+            "options": ["Option A", "Option B", "Option C", "Option D"]
+        }
+    ]
+}

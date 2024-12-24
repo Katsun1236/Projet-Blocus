@@ -13,22 +13,33 @@
             <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
         </div>
         <nav id="side-menu" class="side-menu">
+            <div class="close-btn" onclick="toggleMenu()">&#9776;</div>
             <ul>
-                <li><a href="accueil.html">Accueil</a></li>
-                <li><a href="profile.html">Profil</a></li>
-                <li><a href="forum.html">Forums</a></li>
+                <li><a href="index.html"><img src="../images/home.png" alt="Accueil" />Accueil</a></li>
+                <li><a href="profile.html"><img src="../images/profile.png" alt="Profil" />Profil</a></li>
+                <li><a href="forum.html"><img src="../images/forum.png" alt="Forums" />Forums</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="main-content">
         <section>
             <h2>Votre Profil</h2>
-            <p>Informations sur l'utilisateur...</p>
+            <div>
+                <img id="profilePic" src="../images/default_profile.png" alt="Photo de profil" class="profile-pic" />
+                <p id="pseudo">Pseudo : <span></span></p>
+                <p id="email">Email : <span></span></p>
+            </div>
+            <div>
+                <h3>Scores et Chronos</h3>
+                <ul id="scores-list">
+                    <!-- Les scores et les chronos des cours seront insérés ici -->
+                </ul>
+            </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Question pour un Blocus</p>
     </footer>
-    <script src="../js/script.js"></script>
+    <script src="../js/profile.js"></script>
 </body>
 </html>

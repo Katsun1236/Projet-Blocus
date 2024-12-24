@@ -4,6 +4,12 @@ function toggleMenu() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+    const token = localStorage.getItem('token');
+    if (!token) {
+        window.location.href = 'login.html';
+        return;
+    }
+
     const urlParams = new URLSearchParams(window.location.search);
     const cours = urlParams.get('cours');
     const coursNoms = {
@@ -44,4 +50,27 @@ document.addEventListener("DOMContentLoaded", function() {
             console.error('Erreur de chargement des questions:', error);
             document.getElementById('questions').innerHTML = '<p>Erreur de chargement des questions. Veuillez réessayer plus tard.</p>';
         });
+
+    // Charger les scores et les temps
+    fetch('/profile', {
+        method: 'GET',
+        headers: { 'Authorization': token }
+    })
+    .then(response => response.json())
+    .then(user => {
+        const scores = user.scores || {};
+        const times = user.times || {};
+
+        Object.keys(coursNoms).forEach(cours => {
+            if (document.getElementById(`score_${cours}`)) {
+                document.getElementById(`score_${cours}`).textContent = `Score: ${scores[cours] || 0}`;
+            }
+            if (document.getElementById(`time_${cours}`)) {
+                document.getElementById(`time_${cours}`).textContent = `Temps: ${times[cours] || 'N/A'}`;
+            }
+        });
+    })
+    .catch(error => {
+        console.error('Erreur de chargement des scores:', error);
+    });
 });

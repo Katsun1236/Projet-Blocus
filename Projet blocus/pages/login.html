@@ -5,6 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .container h2 {
+            margin-bottom: 20px;
+            color: #4B0082;
+        }
+        .container label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+        .container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .container button {
+            background-color: #4B0082;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .container button:hover {
+            background-color: #3a006e;
+        }
+        .signup-link, .guest-link {
+            margin-top: 20px;
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -20,6 +62,8 @@
             </div>
             <button type="submit">Se connecter</button>
         </form>
+        <a class="signup-link" href="register.html">Pas encore inscrit ? Inscrivez-vous ici</a>
+        <a class="guest-link" href="index.html" onclick="localStorage.removeItem('token')">Continuer sans se connecter</a>
     </div>
     <script src="../js/auth.js"></script>
 </body>

@@ -42,6 +42,10 @@
         .container button:hover {
             background-color: #3a006e;
         }
+        .login-link, .guest-link {
+            margin-top: 20px;
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -58,6 +62,8 @@
             </div>
             <button type="submit">S'inscrire</button>
         </form>
+        <a class="login-link" href="login.html">Déjà inscrit ? Connectez-vous ici</a>
+        <a class="guest-link" href="index.html" onclick="localStorage.removeItem('token')">Continuer sans se connecter</a>
     </div>
     <script src="../js/auth.js"></script>
 </body>

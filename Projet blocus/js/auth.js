@@ -2,10 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const token = localStorage.getItem('token');
     const currentPath = window.location.pathname.split('/').pop();
 
+    // Redirection si l'utilisateur n'est pas connecté et n'est pas sur les pages de connexion/inscription
     if (!token && currentPath !== 'login.html' && currentPath !== 'register.html') {
-        window.location.href = 'login.html';
+        localStorage.setItem('role', 'anonyme');
     }
 
+    // Redirection si l'utilisateur est déjà connecté et tente d'accéder aux pages de connexion/inscription
     if (token && (currentPath === 'login.html' || currentPath === 'register.html')) {
         window.location.href = 'index.html';
     }

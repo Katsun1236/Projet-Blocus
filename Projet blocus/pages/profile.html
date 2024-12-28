@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <title>Profil Utilisateur</title>
+    <link rel="stylesheet" href="../css/profile.css">
 </head>
 <body>
     <header>
         <div class="header-content">
+            <div class="profile-frame">
+                <img src="../images/profile.png" alt="Profil utilisateur" class="profile-img" />
+                <div class="profile-status" id="profile-status">
+                    <!-- Le contenu sera mis à jour via JavaScript -->
+                </div>
+            </div>
             <img src="../images/logo.png" alt="Question pour un Blocus" class="logo" />
-            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
         <nav id="side-menu" class="side-menu">
             <div class="close-btn" onclick="toggleMenu()">&#9776;</div>
@@ -23,23 +33,32 @@
     </header>
     <main class="main-content">
         <section>
-            <h2>Votre Profil</h2>
-            <div>
-                <img id="profilePic" src="../images/default_profile.png" alt="Photo de profil" class="profile-pic" />
-                <p id="pseudo">Pseudo : <span></span></p>
-                <p id="email">Email : <span></span></p>
+            <h2>Profil Utilisateur</h2>
+            <div class="profile-details">
+                <h3>Informations Personnelles</h3>
+                <form id="profile-form">
+                    <div class="form-group">
+                        <label for="username">Nom d'utilisateur :</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <button type="submit" class="update-button">Mettre à jour</button>
+                </form>
             </div>
-            <div>
-                <h3>Scores et Chronos</h3>
-                <ul id="scores-list">
-                    <!-- Les scores et les chronos des cours seront insérés ici -->
-                </ul>
+            <div class="profile-scores">
+                <h3>Scores</h3>
+                <div class="scores" id="scores">
+                    <!-- Les scores seront mis à jour via JavaScript -->
+                </div>
             </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Question pour un Blocus</p>
     </footer>
-    <script src="../js/profile.js"></script>
+    <script src="../js/scripts-profile.js"></script>
 </body>
 </html>

@@ -1,0 +1,144 @@
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    background-color: #D3D3D3; /* Gris: arrière-plan */
+    margin: 0;
+    padding: 0;
+    border: 5px solid #9932CC; /* Mauve: bordure du site */
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4B0082; /* Pourpre: logo */
+    color: white;
+}
+
+.logo {
+    height: 70px; /* Agrandir le logo */
+    margin: 0 auto; /* Centrer le logo */
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background: #4B0082; /* Pourpre */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold; /* Texte en évidence */
+}
+
+.back-button:hover {
+    background: #3A0066;
+}
+
+.message-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.message-user-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+h2, p {
+    color: #4B0082; /* Pourpre */
+}
+
+#attachments-section a {
+    display: block;
+    margin-top: 5px;
+    color: #4B0082; /* Pourpre */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#attachments-section a:hover {
+    text-decoration: underline;
+}
+
+#comments-section {
+    margin-top: 20px;
+    background-color: #E6E6FA; /* Violet clair */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold; /* Texte en évidence */
+}
+
+textarea,
+input[type="text"],
+input[type="url"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: white;
+    color: black;
+    resize: vertical; /* Permettre de redimensionner verticalement */
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    background: #4B0082; /* Pourpre */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold; /* Texte en évidence */
+}
+
+.submit-button:hover {
+    background: #3A0066;
+}
+
+#comments-list {
+    margin-top: 20px;
+}
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    background-color: #FFFFFF; /* Fond des commentaires */
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.comment-user-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4B0082;
+    color: white;
+}

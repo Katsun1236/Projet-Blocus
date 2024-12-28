@@ -1,137 +1,203 @@
 body {
-    font-family: 'Arial', sans-serif; /* Changez pour la police du logo si nécessaire */
+    font-family: Tahoma, Arial, sans-serif; /* Utilisation de Tahoma */
+    background-color: #D3D3D3; /* Gris: arrière-plan */
     margin: 0;
     padding: 0;
-    background-color: #001f3f; /* Bleu marine */
-}
-
-header {
-    background-color: #4B0082; /* Mauve du logo */
-    color: #fff;
-    width: 100%;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    height: 60px; /* Hauteur ajustée pour le logo */
+    border: 5px solid #9932CC; /* Mauve: bordure du site */
 }
 
 .header-content {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4B0082; /* Pourpre: logo */
+    color: white;
+}
+
+.profile-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: white;
+    margin-right: 20px;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-status {
+    text-align: center;
+    font-size: 14px;
+    color: #4B0082;
+    margin-top: 5px;
 }
 
 .logo {
-    max-height: 50px; /* Hauteur réduite du logo */
-    margin: auto; /* Centrer le logo */
+    height: 70px; /* Agrandir le logo */
+    margin: 0 auto; /* Centrer le logo */
 }
 
 .menu-icon {
-    font-size: 30px;
+    position: relative;
+    width: 30px;
+    height: 25px;
     cursor: pointer;
-    position: absolute; /* Superposer les 3 lignes sur le logo */
-    top: 15px;
-    right: 20px; /* Aligné à droite pour ne pas chevaucher le logo */
+}
+
+.menu-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.menu-icon span:nth-child(1) {
+    top: 0px;
+}
+
+.menu-icon span:nth-child(2), .menu-icon span:nth-child(3) {
+    top: 10px;
+}
+
+.menu-icon span:nth-child(4) {
+    top: 20px;
+}
+
+.menu-icon.open span:nth-child(1) {
+    top: 10px;
+    transform: rotate(135deg);
+}
+
+.menu-icon.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+.menu-icon.open span:nth-child(3) {
+    opacity: 0;
+    left: -60px;
+}
+
+.menu-icon.open span:nth-child(4) {
+    top: 10px;
+    transform: rotate(-135deg);
 }
 
 .side-menu {
-    width: 0;
     position: fixed;
-    z-index: 1;
     top: 0;
-    right: 0; /* Positionné à droite */
+    right: -250px;
+    width: 250px;
     height: 100%;
-    background-color: #4B0082; /* Fond cohérent avec le logo */
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px; /* Espace pour ne pas chevaucher le logo */
+    background-color: #4B0082;
+    color: white;
+    padding-top: 60px;
+    z-index: 1;
+    transition: right 0.5s ease;
 }
 
 .side-menu.open {
-    width: 250px;
+    right: 0;
 }
 
 .side-menu ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
+    font-size: 20px; /* Agrandir le texte du menu latéral */
 }
 
 .side-menu ul li {
-    padding: 8px 16px;
+    padding: 15px 20px; /* Ajouter de la marge pour une meilleure lisibilité */
 }
 
 .side-menu ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
-    display: flex; /* Utilisation de flex pour les images */
+    display: flex;
     align-items: center;
-    font-size: 25px;
 }
 
 .side-menu ul li a img {
-    margin-right: 10px; /* Espacement entre l'image et le texte */
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
 }
 
-.side-menu ul li a:hover {
-    color: #FFD700; /* Couleur dorée au survol */
+.side-menu .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px; /* Coller le bouton du menu à droite */
+    font-size: 30px;
+    cursor: pointer;
 }
 
 .main-content {
-    padding: 1rem;
-    margin-top: 70px; /* Espace pour l'en-tête fixe */
-    transition: margin-left 0.5s;
+    padding: 20px;
 }
 
-main section {
-    background-color: #fff;
+.cours-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligner à gauche */
+    overflow-y: auto;
+    max-height: 80vh; /* Pour que la liste des cours soit scrollable */
+    padding: 10px;
+    background-color: #E6E6FA; /* Violet: carré des cours */
+}
+
+.course-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligner le contenu des cartes à gauche */
+    justify-content: space-between;
+    width: calc(100% - 30px); /* Largeur adaptative et marge pour ne pas déborder */
+    max-width: none; /* Annuler la largeur maximale */
+    height: auto; /* Ajuster la hauteur automatiquement */
     padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: #FFFFFF; /* Fond des cartes de cours */
+    color: #4B0082;
+    text-decoration: none;
+    border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 20px; /* Agrandir le texte des cours */
+}
+
+.course-card:hover {
+    background-color: #4B0082;
+    color: white;
+}
+
+.score-time {
+    display: flex;
+    justify-content: flex-end; /* Placer la case score à droite */
+    width: 100%;
+}
+
+.score-time .score {
+    background-color: #FFD700; /* Jaune pour la petite case de score */
+    padding: 5px;
+    border-radius: 4px;
+    color: #00008B; /* Bleu foncé: texte des scores */
 }
 
 footer {
-    background-color: #4B0082; /* Couleur du logo */
-    color: #fff;
     text-align: center;
-    padding: 1rem;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-.cours {
-    display: flex;
-    flex-direction: column; /* Organiser en colonne pour meilleure lisibilité */
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.cours a {
-    display: flex;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    margin: 5px;
-    text-align: left; /* Alignement à gauche pour une lecture plus naturelle */
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.cours a:hover {
-    background-color: #0056b3;
-}
-
-.question {
-    background-color: #fff;
-    margin: 10px 0;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 10px;
+    background-color: #4B0082;
+    color: white;
 }

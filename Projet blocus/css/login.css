@@ -1,0 +1,173 @@
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F0F0F0;
+    background-image: url('../images/fond-login.png'); /* Image de fond qui prend toute la page */
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px; /* Limiter la largeur du conteneur pour centrer la section */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.right-section {
+    width: 100%;
+    background-color: rgba(224, 224, 224, 0.9); /* Gris avec une opacité pour voir le fond */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px; /* Coins arrondis */
+}
+
+.logo-login {
+    height: 70px; /* Taille du logo */
+    margin-bottom: 20px; /* Espace sous le logo */
+}
+
+.login-box {
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-now {
+    font-size: 24px;
+    color: #4B0082; /* Pourpre */
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold; /* Texte en évidence */
+}
+
+form {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold; /* Texte en évidence */
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: white;
+    color: black;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.password-toggle.open {
+    width: 20px; /* Garder la taille normale */
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background: #4B0082; /* Pourpre */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-weight: bold; /* Texte en évidence */
+}
+
+.login-button:hover {
+    background: #3A0066;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #4B0082;
+    text-decoration: none;
+    font-weight: bold; /* Texte en évidence */
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.social-login {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #E6E6E6;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: bold; /* Texte en évidence */
+}
+
+.social-login img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.social-login:hover {
+    background: #D3D3D3;
+}
+
+.signup-link {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold; /* Texte en évidence */
+}
+
+.signup-link a {
+    color: #4B0082;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+.recaptcha-note {
+    margin-top: 20px;
+    font-size: 12px;
+    text-align: center;
+    color: #666;
+}

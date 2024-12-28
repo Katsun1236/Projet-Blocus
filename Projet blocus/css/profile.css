@@ -1,0 +1,221 @@
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    background-color: #D3D3D3; /* Gris: arrière-plan */
+    margin: 0;
+    padding: 0;
+    border: 5px solid #9932CC; /* Mauve: bordure du site */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4B0082; /* Pourpre: logo */
+    color: white;
+}
+
+.profile-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: white;
+    margin-right: 20px;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-status {
+    text-align: center;
+    font-size: 14px;
+    color: #4B0082;
+    margin-top: 5px;
+}
+
+.logo {
+    height: 70px; /* Agrandir le logo */
+    margin: 0 auto; /* Centrer le logo */
+}
+
+.menu-icon {
+    position: relative;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.menu-icon span:nth-child(1) {
+    top: 0px;
+}
+
+.menu-icon span:nth-child(2), .menu-icon span:nth-child(3) {
+    top: 10px;
+}
+
+.menu-icon span:nth-child(4) {
+    top: 20px;
+}
+
+.menu-icon.open span:nth-child(1) {
+    top: 10px;
+    transform: rotate(135deg);
+}
+
+.menu-icon.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+.menu-icon.open span:nth-child(3) {
+    opacity: 0;
+    left: -60px;
+}
+
+.menu-icon.open span:nth-child(4) {
+    top: 10px;
+    transform: rotate(-135deg);
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #4B0082;
+    color: white;
+    padding-top: 60px;
+    z-index: 1;
+    transition: right 0.5s ease;
+}
+
+.side-menu.open {
+    right: 0;
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 20px; /* Agrandir le texte du menu latéral */
+}
+
+.side-menu ul li {
+    padding: 15px 20px; /* Ajouter de la marge pour une meilleure lisibilité */
+}
+
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.side-menu ul li a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.side-menu .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px; /* Coller le bouton du menu à droite */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.profile-details, .profile-scores {
+    background-color: #E6E6FA; /* Violet clair */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.profile-details h3, .profile-scores h3 {
+    margin-top: 0;
+    color: #4B0082; /* Pourpre */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold; /* Texte en évidence */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: white;
+    color: black;
+}
+
+.update-button {
+    width: 100%;
+    padding: 10px;
+    background: #4B0082; /* Pourpre */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold; /* Texte en évidence */
+}
+
+.update-button:hover {
+    background: #3A0066;
+}
+
+.scores {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Afficher les scores en deux colonnes */
+    gap: 10px;
+}
+
+.scores p {
+    margin: 0;
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4B0082;
+    color: white;
+}

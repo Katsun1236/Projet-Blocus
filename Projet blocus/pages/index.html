@@ -9,8 +9,18 @@
 <body>
     <header>
         <div class="header-content">
+            <div class="profile-frame">
+                <img src="../images/profile.png" alt="Profil utilisateur" class="profile-img" />
+                <div class="profile-status">
+                    <!-- Le contenu sera mis à jour via JavaScript -->
+                </div>
+            </div>
             <img src="../images/logo.png" alt="Question pour un Blocus" class="logo" />
-            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
         <nav id="side-menu" class="side-menu">
             <div class="close-btn" onclick="toggleMenu()">&#9776;</div>
@@ -25,22 +35,61 @@
         <section>
             <h2>Bienvenue sur Question pour un Blocus</h2>
             <p>Choisissez un cours pour commencer !</p>
-            <div class="cours">
-                <a href="qcm.html?cours=relation_publique">Relation Publique <span class="score" id="score_relation_publique"></span> <span class="time" id="time_relation_publique"></span></a>
-                <a href="qcm.html?cours=evenementiel">Introduction à l'Évènementiel <span class="score" id="score_evenementiel"></span> <span class="time" id="time_evenementiel"></span></a>
-                <a href="qcm.html?cours=semiologie">Sémiologie <span class="score" id="score_semiologie"></span> <span class="time" id="time_semiologie"></span></a>
-                <a href="qcm.html?cours=media">Introduction aux Médias <span class="score" id="score_media"></span> <span class="time" id="time_media"></span></a>
-                <a href="qcm.html?cours=cinema">Langage Cinématographique <span class="score" id="score_cinema"></span> <span class="time" id="time_cinema"></span></a>
-                <a href="qcm.html?cours=interculturelle">Communication Interculturelle <span class="score" id="score_interculturelle"></span> <span class="time" id="time_interculturelle"></span></a>
-                <a href="qcm.html?cours=anglais">Anglais <span class="score" id="score_anglais"></span> <span class="time" id="time_anglais"></span></a>
-                <a href="qcm.html?cours=francais">Français <span class="score" id="score_francais"></span> <span class="time" id="time_francais"></span></a>
+            <div class="cours-container">
+                <a href="qcm.html?cours=relation_publique" class="course-card">
+                    📚 Relation Publique
+                    <div class="score-time">
+                        <span class="score" id="score_relation_publique">0/50</span>
+                    </div>
+                </a>
+                <a href="qcm.html?cours=evenementiel" class="course-card">
+                    🎉 Introduction à l'Évènementiel
+                    <div class="score-time">
+                        <span class="score" id="score_evenementiel">0/50</span>
+                    </div>
+                </a>
+                <a href="qcm.html?cours=semiologie" class="course-card">
+                    🧠 Sémiologie
+                    <div class="score-time">
+                        <span class="score" id="score_semiologie">0/50</span>
+                    </div>
+                </a>
+                <a href="qcm.html?cours=media" class="course-card">
+                    📺 Introduction aux Médias
+                    <div class="score-time">
+                        <span class="score" id="score_media">0/50</span>
+                    </div>
+                </a>
+                <a href="qcm.html?cours=cinema" class="course-card">
+                    🎬 Langage Cinématographique
+                    <div class="score-time">
+                        <span class="score" id="score_cinema">0/50</span>
+                    </div>
+                </a>
+                <a href="qcm.html?cours=interculturelle" class="course-card">
+                    🌍 Communication Interculturelle
+                    <div class="score-time">
+                        <span class="score" id="score_interculturelle">0/50</span>
+                    </div>
+                </a>
+                <a href="qcm.html?cours=anglais" class="course-card">
+                    🔍 Anglais
+                    <div class="score-time">
+                        <span class="score" id="score_anglais">0/50</span>
+                    </div>
+                </a>
+                <a href="qcm.html?cours=francais" class="course-card">
+                    ✏️ Français
+                    <div class="score-time">
+                        <span class="score" id="score_francais">0/50</span>
+                    </div>
+                </a>
             </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Question pour un Blocus</p>
     </footer>
-    <script src="../js/auth.js"></script>
-    <script src="../js/script.js"></script>
+    <script src="../js/script-index.js"></script>
 </body>
 </html>

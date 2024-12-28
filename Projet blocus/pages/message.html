@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="message-title">Message</title>
+    <link rel="stylesheet" href="../css/message.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="../images/logo.png" alt="Question pour un Blocus" class="logo" />
+        </div>
+    </header>
+    <main class="main-content">
+        <section>
+            <button onclick="window.history.back()" class="back-button">Retour</button>
+            <div class="message-header">
+                <img id="message-user-photo" src="" alt="Photo de l'utilisateur" class="message-user-photo">
+                <strong id="message-username"></strong>
+            </div>
+            <h2 id="message-title-display">Titre du message</h2>
+            <p id="message-content">Contenu du message</p>
+            <div id="attachments-section"></div>
+            <div id="comments-section">
+                <h3>Commentaires</h3>
+                <form id="comment-form">
+                    <div class="form-group">
+                        <textarea id="comment" name="comment" required placeholder="Ajouter un commentaire..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Poster</button>
+                </form>
+                <div id="comments-list">
+                    <!-- Les commentaires seront ajoutés ici via JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Question pour un Blocus</p>
+    </footer>
+    <script src="../js/script-message.js"></script>
+</body>
+</html>

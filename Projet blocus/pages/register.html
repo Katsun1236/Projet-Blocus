@@ -4,67 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <style>
-        .container {
-            max-width: 400px;
-            margin: auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        .container h2 {
-            margin-bottom: 20px;
-            color: #4B0082;
-        }
-        .container label {
-            display: block;
-            text-align: left;
-            margin-bottom: 5px;
-        }
-        .container input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .container button {
-            background-color: #4B0082;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .container button:hover {
-            background-color: #3a006e;
-        }
-        .login-link, .guest-link {
-            margin-top: 20px;
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/register.css">
 </head>
 <body>
+    <div class="background-image"></div>
     <div class="container">
-        <h2>Inscription</h2>
-        <form id="registerForm">
-            <div>
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" required>
+        <div class="right-section">
+            <img src="../images/logo.png" alt="Logo" class="logo-register">
+            <div class="register-box">
+                <h2 class="register-now">Inscription</h2>
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Mot de passe :</label>
+                        <div class="password-container">
+                            <input type="password" id="password" name="password" required>
+                            <img src="../images/eyes-closed.png" alt="Afficher le mot de passe" class="password-toggle" onclick="togglePasswordVisibility()">
+                        </div>
+                    </div>
+                    <button type="submit" class="register-button">S'inscrire</button>
+                </form>
+                <div class="signup-link">
+                    Déjà inscrit ? <a href="login.html">Connectez-vous ici</a>
+                </div>
+                <button class="continue-button" onclick="continueWithoutSigningIn()">Continuer sans se connecter</button>
+                <div class="recaptcha-note">
+                    Ce site est protégé par reCAPTCHA Enterprise et les <a href="#">Politiques de confidentialité</a> et <a href="#">Conditions d'utilisation</a> de Google s'appliquent.
+                </div>
             </div>
-            <div>
-                <label for="password">Mot de passe :</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit">S'inscrire</button>
-        </form>
-        <a class="login-link" href="login.html">Déjà inscrit ? Connectez-vous ici</a>
-        <a class="guest-link" href="index.html" onclick="localStorage.removeItem('token')">Continuer sans se connecter</a>
+        </div>
     </div>
-    <script src="../js/auth.js"></script>
+    <script src="../js/validation.js"></script>
 </body>
 </html>

@@ -3,17 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forums</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <title>Forum</title>
+    <link rel="stylesheet" href="../css/forum.css">
 </head>
 <body>
     <header>
         <div class="header-content">
+            <div class="profile-frame">
+                <img src="../images/profile.png" alt="Profil utilisateur" class="profile-img" />
+                <div class="profile-status">
+                    <!-- Le contenu sera mis à jour via JavaScript -->
+                </div>
+            </div>
             <img src="../images/logo.png" alt="Question pour un Blocus" class="logo" />
-            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
         <nav id="side-menu" class="side-menu">
-            <div class="close-btn" onclick="toggleMenu()">&#9776;</div>
+            <div class="close-btn">&#9776;</div>
             <ul>
                 <li><a href="index.html"><img src="../images/home.png" alt="Accueil" />Accueil</a></li>
                 <li><a href="profile.html"><img src="../images/profile.png" alt="Profil" />Profil</a></li>
@@ -23,13 +33,32 @@
     </header>
     <main class="main-content">
         <section>
-            <h2>Forums</h2>
-            <p>Bienvenue sur les forums. Participez aux discussions ci-dessous :</p>
-            <!-- Ajoutez les forums ici -->
+            <h2>Forum</h2>
+            <form id="forum-form">
+                <div class="form-group">
+                    <label for="title">Titre :</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="content">Contenu :</label>
+                    <textarea id="content" name="content" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="attachments">Ajouter des fichiers :</label>
+                    <input type="file" id="attachments" name="attachments">
+                </div>
+                <button type="submit" class="submit-button">Publier</button>
+            </form>
+            <div class="messages" id="messages">
+                <!-- Les messages seront ajoutés ici via JavaScript -->
+            </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Question pour un Blocus</p>
     </footer>
+    <script src="../js/menu-toggle.js"></script>
+    <script src="../js/reaction-handler.js"></script>
+    <script src="../js/script-forum.js"></script>
 </body>
 </html>

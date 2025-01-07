@@ -4,14 +4,18 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
+
 const app = express();
 
 const PORT = process.env.PORT || 5000;
 const DB_URI = 'mongodb://127.0.0.1:27017/projet-blocus';
 const JWT_SECRET = 'votre_secret_JWT_ici';
 
+// Importer le modèle User depuis users.js
+const User = require('./js/users');
+
 mongoose.set('strictQuery', true);
-mongoose.connect(DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(DB_URI, {})
     .then(() => console.log(`Connected to MongoDB at ${DB_URI}`))
     .catch(err => console.error(`Failed to connect to MongoDB: ${err.message}`));
 
@@ -24,28 +28,20 @@ app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use('/js', express.static(path.join(__dirname, 'js')));
 app.use(express.static(path.join(__dirname, 'pages')));
 
-const UserSchema = new mongoose.Schema({
-    email: { type: String, required: true, unique: true },
-    password: { type: String, required: true },
-    pseudo: { type: String },
-    profilePic: { type: String },
-    scores: { type: Map, of: Number },
-    times: { type: Map, of: Number },
-    role: { type: String, enum: ['visiteur', 'administrateur'], default: 'visiteur' }
-});
-
-const User = mongoose.model('User', UserSchema);
-
 app.post('/register', async (req, res) => {
     const { email, password } = req.body;
+    console.log('Reçu demande d\'inscription:', { email, password });
 
     try {
         const existingUser = await User.findOne({ email });
         if (existingUser) {
+            console.log('Utilisateur déjà existant:', existingUser.email);
             return res.status(400).json({ error: 'Cette adresse e-mail est déjà utilisée. Veuillez vous connecter.' });
         }
 
         const hashedPassword = await bcrypt.hash(password, 10);
+        console.log('Mot de passe chiffré:', hashedPassword);
+
         const newUser = new User({
             email,
             password: hashedPassword,
@@ -55,8 +51,10 @@ app.post('/register', async (req, res) => {
         });
 
         await newUser.save();
+        console.log('Nouvel utilisateur enregistré:', newUser.email);
         res.status(201).json({ message: 'Inscription réussie' });
     } catch (err) {
+        console.error('Erreur lors de l\'inscription:', err.message);
         res.status(500).json({ error: 'Erreur lors de l\'inscription' });
     }
 });

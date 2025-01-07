@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anglais</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/anglais.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="profile-frame">
+                <img src="../../images/profile.png" alt="Profil utilisateur" class="profile-img" />
+                <div class="profile-status">
+                    <!-- Le contenu sera mis à jour via JavaScript -->
+                </div>
+            </div>
+            <img src="../../images/logo.png" alt="Question pour un Blocus" class="logo" />
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <nav id="side-menu" class="side-menu">
+            <div class="close-btn" onclick="toggleMenu()">&#9776;</div>
+            <ul>
+                <li><a href="../../index.html"><img src="../../images/home.png" alt="Accueil" />Accueil</a></li>
+                <li><a href="../../profil.html"><img src="../../images/profile.png" alt="Profil" />Profil</a></li>
+                <li><a href="../../forum.html"><img src="../../images/forum.png" alt="Forum" />Forum</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section>
+            <h2>Anglais</h2>
+            <p>Le cours d'anglais vous aidera à améliorer votre compréhension de la langue anglaise, à enrichir votre vocabulaire et à perfectionner vos compétences en grammaire et en expression orale et écrite.</p>
+            <ul>
+                <li>Grammaire</li>
+                <li>Vocabulaire</li>
+                <li>Compréhension écrite</li>
+                <li>Compréhension orale</li>
+                <li>Expression écrite</li>
+                <li>Expression orale</li>
+            </ul>
+            <div class="button-container">
+                <button class="main-button" onclick="window.location.href='QCM_Anglais.html'">Accéder au QCM</button>
+                <button class="main-button" onclick="window.location.href='TAT_Anglais.html'">Accéder aux Textes à Trous</button>
+                <button class="main-button" onclick="window.location.href='Contenu_Anglais.html'">Voir le Contenu</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Votre Entreprise. Tous droits réservés.</p>
+    </footer>
+    <script src="../../js/menu-toggle.js"></script>
+</body>
+</html>

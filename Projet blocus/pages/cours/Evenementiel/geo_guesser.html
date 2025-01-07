@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geo-Guesser - Événementiel</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/cours/evenementiel.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="profile-frame">
+                <img src="../../images/profile.png" alt="Profil utilisateur" class="profile-img" />
+                <div class="profile-status">
+                    <!-- Le contenu sera mis à jour via JavaScript -->
+                </div>
+            </div>
+            <img src="../../images/logo.png" alt="Questions pour un Blocus" class="logo" />
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <nav id="side-menu" class="side-menu">
+            <div class="close-btn" onclick="toggleMenu()">&#9776;</div>
+            <ul>
+                <li><a href="../../index.html"><img src="../../images/home.png" alt="Accueil" />Accueil</a></li>
+                <li><a href="../../profil.html"><img src="../../images/profile.png" alt="Profil" />Profil</a></li>
+                <li><a href="../../forum.html"><img src="../../images/forum.png" alt="Forum" />Forum</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section class="qcm-section">
+            <h2>Geo-Guesser - Événementiel</h2>
+            <div id="image-container" class="qcm-image-container">
+                <!-- Image à deviner sera insérée ici via JavaScript -->
+            </div>
+            <div id="question-container" class="qcm-question-container">
+                <!-- Options de réponse seront insérées ici via JavaScript -->
+            </div>
+            <button class="submit-button" onclick="submitAnswer()">Soumettre</button>
+            <button class="next-button" onclick="nextQuestion()" style="display: none;">Question Suivante</button>
+        </section>
+    </main>   
+    <footer class="footer">
+        <p>&copy; 2025 Questions pour un Blocus. Tous droits réservés.</p>
+    </footer>
+    <script src="../../js/menu-toggle.js"></script>
+    <script src="../../js/sound_effects.js"></script>
+    <script src="../../js/geo_guesser.js"></script>
+</body>
+</html>

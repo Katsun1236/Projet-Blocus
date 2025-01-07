@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interculturel</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/cours/interculturel.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="profile-frame">
+                <img src="../../images/profile.png" alt="Profil utilisateur" class="profile-img" />
+                <div class="profile-status">
+                    <!-- Le contenu sera mis à jour via JavaScript -->
+                </div>
+            </div>
+            <img src="../../images/logo.png" alt="Questions pour un Blocus" class="logo" />
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <nav id="side-menu" class="side-menu">
+            <div class="close-btn" onclick="toggleMenu()">&#9776;</div>
+            <ul>
+                <li><a href="../../index.html"><img src="../../images/home.png" alt="Accueil" />Accueil</a></li>
+                <li><a href="../../profil.html"><img src="../../images/profile.png" alt="Profil" />Profil</a></li>
+                <li><a href="../../forum.html"><img src="../../images/forum.png" alt="Forum" />Forum</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section>
+            <h2>Interculturel</h2>
+            <p>Le cours d'interculturel explore les interactions entre différentes cultures et les dynamiques culturelles dans un contexte global. Ce cours couvre les concepts clés et les théories de l'interculturel, ainsi que leur application dans divers contextes professionnels et sociaux.</p>
+            <ul>
+                <li>Introduction à l'interculturel</li>
+                <li>Communication interculturelle</li>
+                <li>Théories interculturelles</li>
+                <li>Gestion des conflits culturels</li>
+                <li>Éthique interculturelle</li>
+                <li>Analyse interculturelle</li>
+            </ul>
+            <div class="button-container">
+                <button class="main-button" onclick="window.location.href='interculturel_qcm.html'">Accéder au QCM</button>
+                <button class="main-button" onclick="window.location.href='interculturel_contenu.html'">Voir le Contenu</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Questions pour un Blocus. Tous droits réservés.</p>
+    </footer>
+    <script src="../../js/menu-toggle.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr" data-question-file="qcm_questions.html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCM - Relations Publiques</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/cours/relation_publique.css">
+    <link rel="icon" href="../../images/icone" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="profile-frame">
+                <img src="../../images/profile.png" alt="Profil utilisateur" class="profile-img" />
+                <div class="profile-status">
+                    <!-- Le contenu sera mis à jour via JavaScript -->
+                </div>
+            </div>
+            <img src="../../images/logo.png" alt="Questions pour un Blocus" class="logo" />
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <nav id="side-menu" class="side-menu">
+            <div class="close-btn" onclick="toggleMenu()">&#9776;</div>
+            <ul>
+                <li><a href="../../index.html"><img src="../../images/home.png" alt="Accueil" />Accueil</a></li>
+                <li><a href="../../profil.html"><img src="../../images/profile.png" alt="Profil" />Profil</a></li>
+                <li><a href="../../forum.html"><img src="../../images/forum.png" alt="Forum" />Forum</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section>
+            <h2>QCM - Relations Publiques</h2>
+            <div id="question-container"></div>
+            <button class="submit-button" onclick="submitAnswer()">Soumettre</button>
+            <button class="next-button" onclick="nextQuestion()" style="display: none;">Question Suivante</button>
+            <!-- Bouton de volume -->
+            <div class="volume-control">
+                <img src="../../images/volume.png" alt="Volume" class="volume-icon" onclick="toggleVolumeSlider()">
+                <input type="range" min="0" max="100" value="50" class="volume-slider" id="volume-slider" oninput="adjustVolume(this.value)">
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; Projet Blocus </p>
+    </footer>
+    <script src="../../js/menu-toggle.js"></script>
+    <script src="../../js/sound_effects.js"></script>
+    <script src="../../js/load_questions/load_questions_relation_publique.js"></script>
+    <script>
+        // Fonction pour basculer l'affichage de la barre de réglage du volume
+        function toggleVolumeSlider() {
+            const slider = document.getElementById('volume-slider');
+            slider.style.display = slider.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Fonction pour ajuster le volume
+        function adjustVolume(value) {
+            setVolume(value);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Masquer la barre de volume au chargement de la page
+            const slider = document.getElementById('volume-slider');
+            slider.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

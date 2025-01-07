@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
     <link rel="stylesheet" href="../css/login.css">
-    <!-- Charger la bibliothèque Google Sign-In -->
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <!-- Charger la bibliothèque Apple Sign-In -->
-    <script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
 </head>
 <body>
     <div class="background-image"></div>
@@ -32,10 +28,6 @@
                     <button type="submit" class="login-button">Se connecter</button>
                     <a href="#" class="forgot-password">Mot de passe oublié ?</a>
                 </form>
-                <!-- Bouton Google Sign-In -->
-                <div class="g-signin2" data-onsuccess="onSignIn"></div>
-                <!-- Bouton Apple Sign-In -->
-                <div id="appleid-signin" class="signin-button" data-color="black" data-border="true" data-type="sign-in"></div>
                 <div class="signup-link">
                     Pas encore inscrit ? <a href="register.html">Faites-le ici</a>
                 </div>
@@ -47,6 +39,5 @@
     </div>
     <script src="../js/auth.js"></script>
     <script src="../js/script.js"></script>
-    <script src="../js/oauth.js"></script> <!-- Nouveau fichier JavaScript pour Google et Apple Sign-In -->
 </body>
 </html>

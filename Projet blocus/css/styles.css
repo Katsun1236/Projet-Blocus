@@ -1,9 +1,17 @@
+
 body {
-    font-family: Tahoma, Arial, sans-serif; /* Utilisation de Tahoma */
-    background-color: #D3D3D3; /* Gris: arrière-plan */
+    font-family: Tahoma, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    border: 5px solid #9932CC; /* Mauve: bordure du site */
+    background: url('../../images/fond_login.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .header-content {
@@ -181,6 +189,31 @@ body {
     background-color: #4B0082;
     color: white;
 }
+/* Ajouter ce style pour la section des cours */
+.cours-container {
+    display: flex;
+    flex-direction: column; /* Défilement vertical */
+    gap: 20px;
+    align-items: center;
+}
+
+.course-card {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    width: 80%; /* Vous pouvez ajuster cette largeur selon vos besoins */
+    transition: all 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
 .score-time {
     display: flex;
@@ -193,6 +226,7 @@ body {
     padding: 5px;
     border-radius: 4px;
     color: #00008B; /* Bleu foncé: texte des scores */
+
 }
 
 footer {
@@ -200,4 +234,107 @@ footer {
     padding: 10px;
     background-color: #4B0082;
     color: white;
+}
+/* Ajout de styles pour la section de contenu */
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pdf-container {
+    width: 100%;
+    height: calc(100vh - 250px); /* Ajustez cette valeur si nécessaire */
+    border: 1px solid #6200ea;
+    border-radius: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header-top {
+    background-color: #343a40;
+    padding: 20px 0;
+    color: #ffffff;
+}
+
+.header-top .logo {
+    float: left;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.header-top nav {
+    float: right;
+}
+
+.header-top .nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-top .nav-list li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.header-top .nav-list a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-top .nav-list a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 48px;
+}
+
+.hero p {
+    margin: 20px 0 0;
+    font-size: 24px;
+}
+
+
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+/* Style général pour la page avec l'image de fond */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../images/fond_login.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
 }

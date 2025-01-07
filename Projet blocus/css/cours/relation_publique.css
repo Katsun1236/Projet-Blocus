@@ -1,0 +1,176 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../../images/fond-login.png');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #6200ea;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header img {
+    height: 40px;
+}
+
+.menu-icon {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
+.qcm-question {
+    background-color: #fff;
+    border: 2px solid #6200ea;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.qcm-question p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.qcm-question div {
+    margin-top: 10px;
+}
+
+.qcm-question label {
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px;
+    display: block;
+}
+
+.submit-button, .next-button, .main-button {
+    background-color: #6200ea;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-top: 20px;
+    margin-right: 10px;  /* Pour espacer les boutons */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:hover, .next-button:hover, .main-button:hover {
+    background-color: #3700b3;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.return-button {
+    position: absolute;
+    top: 100px; /* Ajuster cette valeur pour descendre un peu le bouton */
+    right: 20px;
+    background-color: #6200ea;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.return-button:hover {
+    background-color: #3700b3;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.score-display, .timer-display {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    position: fixed;
+    bottom: 110px;
+    right: 10px;
+    margin-left: 10px; /* Espace entre le score et le temps */
+}
+
+.timer-display {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+    margin-left: 10px; /* Espace entre le score et le temps */
+}
+
+.footer {
+    background-color: #6200ea;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.return-right {
+    margin-left: auto;
+}
+
+.pdf-container {
+    width: 100%;
+    height: calc(100vh - 150px); /* Ajustez cette valeur si nécessaire */
+    border: 1px solid #6200ea;
+    border-radius: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.volume-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.volume-slider {
+    display: none; /* Masqué par défaut */
+    width: 100px;
+    margin-left: 10px;
+}
+.question-type {
+    font-size: 0.1em;
+    font-style: italic;
+    color: #f13232; /* Optionnel : vous pouvez ajuster la couleur selon vos préférences */
+}

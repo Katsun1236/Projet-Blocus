@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     userRoleDisplay.id = 'user-role';
     loginForm.appendChild(userRoleDisplay);
 
-    fetch('users.json')
+    fetch('/users.json')  // Assurez-vous que l'URL est correcte
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
